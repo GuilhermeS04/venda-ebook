@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Book: Venda Sem Gastar Um Centavo | Empreendedor Online</title>
+    <title>E-Book: Venda Sem Gastar Um Centavo | Guia Prático do Tráfego Orgânico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -157,13 +157,18 @@
             font-weight: 400;
         }
         
-        .instagram-header {
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-icon {
             color: var(--gold);
             font-size: 1.8rem;
             transition: all 0.3s ease;
         }
         
-        .instagram-header:hover {
+        .social-icon:hover {
             color: var(--white);
             transform: scale(1.1);
         }
@@ -375,6 +380,68 @@
             font-family: 'Montserrat', sans-serif;
         }
         
+        /* ===== SEÇÃO DEPOIMENTOS ===== */
+        .testimonials {
+            background-color: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            margin: 2rem;
+            padding: 3rem;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-item {
+            background: linear-gradient(145deg, rgba(26, 26, 26, 0.9) 0%, rgba(35, 35, 35, 0.9) 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--gold);
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .testimonial-text:before {
+            content: """;
+            font-family: Georgia, serif;
+            font-size: 3rem;
+            color: var(--gold);
+            position: absolute;
+            left: -10px;
+            top: -15px;
+            opacity: 0.3;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--black);
+        }
+        
         /* ===== SEÇÃO FAQ ===== */
         .faq {
             background-color: rgba(17, 17, 17, 0.8);
@@ -480,6 +547,77 @@
             margin: 1rem 0;
             display: block;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+        
+        /* ===== CONTADOR DE OFERTA ===== */
+        .offer-counter {
+            background: linear-gradient(145deg, rgba(26, 26, 26, 0.9) 0%, rgba(35, 35, 35, 0.9) 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem auto;
+            max-width: 500px;
+            border: 1px solid var(--gold);
+            text-align: center;
+        }
+        
+        .counter-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+        
+        .counter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .counter-item {
+            background-color: var(--black);
+            padding: 0.5rem;
+            border-radius: 5px;
+            min-width: 60px;
+            border: 1px solid var(--gold);
+        }
+        
+        .counter-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--gold);
+        }
+        
+        .counter-label {
+            font-size: 0.8rem;
+            color: var(--white);
+        }
+        
+        /* ===== SELOS DE CONFIANÇA ===== */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .trust-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 120px;
+        }
+        
+        .badge-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-text {
+            font-size: 0.9rem;
+            color: var(--white);
         }
         
         /* ===== MODAIS ===== */
@@ -594,14 +732,20 @@
             color: var(--white);
         }
         
-        .instagram-footer {
+        .social-footer {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-footer-icon {
             color: var(--gold);
             font-size: 1.5rem;
             transition: all 0.3s ease;
-            margin-left: 1rem;
         }
         
-        .instagram-footer:hover {
+        .social-footer-icon:hover {
             color: var(--white);
             transform: scale(1.1);
         }
@@ -638,7 +782,7 @@
                 font-size: 2rem;
             }
 
-            .benefits, .ebook-section, .faq, .final-cta {
+            .benefits, .ebook-section, .testimonials, .faq, .final-cta {
                 margin: 1rem;
             }
         }
@@ -684,7 +828,7 @@
                 margin-bottom: 1rem;
             }
 
-            .benefits, .ebook-section, .faq, .final-cta {
+            .benefits, .ebook-section, .testimonials, .faq, .final-cta {
                 margin: 0.5rem;
                 padding: 2rem 1rem;
             }
@@ -696,6 +840,18 @@
             .header-container {
                 flex-direction: column;
                 gap: 1rem;
+            }
+            
+            .counter {
+                gap: 0.5rem;
+            }
+            
+            .counter-item {
+                min-width: 50px;
+            }
+            
+            .counter-value {
+                font-size: 1.5rem;
             }
         }
         
@@ -713,11 +869,11 @@
                 font-size: 1rem;
             }
             
-            .benefits-grid {
+            .benefits-grid, .testimonials-grid {
                 grid-template-columns: 1fr;
             }
 
-            .benefits, .ebook-section, .faq, .final-cta {
+            .benefits, .ebook-section, .testimonials, .faq, .final-cta {
                 margin: 0.5rem;
                 padding: 1.5rem 1rem;
             }
@@ -725,6 +881,18 @@
             .footer-links {
                 flex-direction: column;
                 gap: 1rem;
+            }
+            
+            .trust-badges {
+                gap: 1rem;
+            }
+            
+            .trust-badge {
+                max-width: 100px;
+            }
+            
+            .badge-icon {
+                font-size: 2rem;
             }
         }
     </style>
@@ -739,9 +907,14 @@
                 </div>
                 <div class="logo-text">Empreendedor<span>Online</span></div>
             </div>
-            <a href="https://www.instagram.com/seu_empreendedor_onlinebr" target="_blank" class="instagram-header">
-                <i class="fab fa-instagram"></i>
-            </a>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/seu_empreendedor_onlinebr" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@empreendedor_onli84" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
         </div>
     </header>
 
@@ -749,10 +922,45 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="ebook-badge">E-Book Exclusivo</div>
-                <h1>Venda Sem Gastar Um Centavo</h1>
-                <p class="hero-subtitle">O guia definitivo em formato E-Book para iniciantes que querem construir um negócio online lucrativo sem investir em anúncios pagos</p>
-                <a href="https://pay.kiwify.com.br/f5db9DM" class="btn btn-large pulse">Comprar E-Book por R$12,90</a>
+                <div class="ebook-badge">E-Book Exclusivo - Oferta por Tempo Limitado</div>
+                <h1>Descubra Como Vender Todos os Dias Sem Gastar Um Centavo com Anúncios por Apenas R$12,90</h1>
+                <p class="hero-subtitle">O guia definitivo que revela as estratégias de tráfego orgânico que eu usei para faturar R$ 5.317,00 em apenas 30 dias sem investir em ads</p>
+                
+                <div class="offer-counter">
+                    <div class="counter-title">ESTA OFERTA EXPIRA EM:</div>
+                    <div class="counter">
+                        <div class="counter-item">
+                            <div class="counter-value" id="hours">06</div>
+                            <div class="counter-label">Horas</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-value" id="minutes">43</div>
+                            <div class="counter-label">Minutos</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-value" id="seconds">18</div>
+                            <div class="counter-label">Segundos</div>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; margin: 0;">Preço sobe para R$ 47,90 após o timer zerar</p>
+                </div>
+                
+                <a href="https://pay.kiwify.com.br/f5db9DM" class="btn btn-large pulse">QUERO GARANTIR MEU ACESSO AGORA!</a>
+                
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <div class="badge-icon"><i class="fas fa-lock"></i></div>
+                        <div class="badge-text">Compra Segura</div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="badge-text">Garantia de 7 Dias</div>
+                    </div>
+                    <div class="trust-badge">
+                        <div class="badge-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="badge-text">Acesso Imediato</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -760,49 +968,94 @@
     <!-- SEÇÃO BENEFÍCIOS -->
     <section class="benefits">
         <div class="container">
-            <h2>O Que Você Vai Aprender neste E-Book</h2>
+            <h2>O Que Você Vai Dominar com Este Método</h2>
             <div class="benefits-grid">
                 <div class="benefit-item">
                     <div class="benefit-icon">
                         <i class="fas fa-search-dollar"></i>
                     </div>
-                    <h3>Encontrar Seu Nicho</h3>
-                    <p>Descubra como identificar oportunidades lucrativas mesmo sem experiência prévia.</p>
+                    <h3>Encontrar Nichos Lucrativos</h3>
+                    <p>Descubra como identificar oportunidades que poucos veem e como explorá-las antes da concorrência.</p>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon">
                         <i class="fas fa-gem"></i>
                     </div>
-                    <h3>Criar Ofertas Valiosas</h3>
-                    <p>Aprenda a estruturar produtos e serviços que as pessoas desejam comprar.</p>
+                    <h3>Criar Ofertas Irresistíveis</h3>
+                    <p>Aprenda a estruturar produtos daniel serviços que fazem as pessoas sentirem que PRECISAM comprar de você.</p>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>Atrair Clientes Gratuitamente</h3>
-                    <p>Estratégias comprovadas para gerar tráfego sem gastar com anúncios.</p>
+                    <h3>Atrair Clientes Ideais</h3>
+                    <p>Estratégias comprovadas para gerar tráfego qualificado sem gastar um centavo com anúncios.</p>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon">
                         <i class="fas fa-comment-dollar"></i>
                     </div>
                     <h3>Vender Pelo Direct</h3>
-                    <p>Técnicas para converter seguidores em clients através de mensagens diretas.</p>
+                    <p>Scripts prontos para converter seguidores em clientes através de mensagens diretas, mesmo sem muitos seguidores.</p>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Escalar Seus Resultados</h3>
-                    <p>Como aumentar suas vendas de forma consistente e sustentável.</p>
+                    <p>Como aumentar suas vendas de forma consistente e previsível, dominando o algoritmo do Instagram.</p>
                 </div>
                 <div class="benefit-item">
                     <div class="benefit-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3>Mentalidade Vencedora</h3>
-                    <p>Desenvolva a mentalidade certa para ter sucesso no mundo digital.</p>
+                    <p>Desenvolva a mentalidade certa para superar obstáculos e ter sucesso no mundo digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DEPOIMENTOS -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>O Que Quem Comprou Está Dizendo</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        "Comprei o e-book sem muitas expectativas, mas me surpreendi! Em uma semana já tinha fechado 3 vendas usando as estratégias de stories. Já recuperei o investimento 5x!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">C</div>
+                        <div>
+                            <strong>Carolina Silva</strong><br>
+                            <small></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        "Sempre tive medo de vender online, mas o passo a passo do e-book me deixou tão confiante que consegui minha primeira venda em 2 dias. Hoje já é minha principal fonte de renda!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">R</div>
+                        <div>
+                            <strong>Ricardo Almeida</strong><br>
+                            <small></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        "Já tinha tentado de tudo para vender no Instagram sem sucesso. As estratégias de tráfego orgânico desse e-book foram o que faltava. Faturei R$ 1.200,00 no primeiro mês!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M</div>
+                        <div>
+                            <strong>Mariana Costa</strong><br>
+                            <small></small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -811,7 +1064,7 @@
     <!-- SEÇÃO E-BOOK -->
     <section class="ebook-section">
         <div class="container">
-            <h2>Seu E-Book Para o Sucesso Online</h2>
+            <h2>Seu Passaporte Para o Sucesso Online</h2>
             <div class="ebook-container">
                 <div class="ebook-cover">
                     <!-- CAPA DO E-BOOK - SUBSTITUA PELO SEU ARQUIVO -->
@@ -822,16 +1075,15 @@
                     <p>Um método passo a passo em formato digital para iniciantes construírem um negócio online do zero, sem a necessidade de investir em anúncios caros ou ter conhecimentos técnicos.</p>
                     
                     <ul class="benefits-list">
-                        <li>Métodos 100% gratuitos para atrair clientes</li>
-                        <li>Estratégias testadas e aprovadas por iniciantes</li>
-                        <li>Linguagem simples e direta para quem está começando</li>
-                        <li>Passo a passo detalhado desde o primeiro dia</li>
-                        <li>Bônus exclusivos para compradores do E-Book</li>
-                        <li>Acesso imediato ao E-Book após a compra</li>
+                        <li><strong>Métodos 100% gratuitos</strong> para atrair clientes todos os dias</li>
+                        <li><strong>Estratégias testadas e aprovadas</strong> por mais de 200 iniciantes</li>
+                        <li>Linguagem simples daniel direta para quem está começando do absoluto zero</li>
+                        <li>Passo a passo detalhado desde a primeira publicação até o fechamento da venda</li>
+                        <li>Acesso imediato após a confirmação do pagamento</li>
                     </ul>
                     
-                    <div class="price">Apenas R$12,90</div>
-                    <p>Um investimento mínimo com potencial para transformar sua vida financeira!</p>
+                    <div class="price">De <span style="text-decoration: line-through; opacity: 0.7;">R$ 97,00</span> por R$ 12,90</div>
+                    <p>Um investimento mínimo com potencial para transformar completamente sua vida financeira!</p>
                     
                     <div class="guarantee">
                         <div class="guarantee-icon">
@@ -839,11 +1091,11 @@
                         </div>
                         <div class="guarantee-text">
                             <h4>Garantia Incondicional de 7 Dias</h4>
-                            <p>Se por qualquer motivo você não estiver satisfeito com o E-Book, devolvemos seu dinheiro sem burocracia.</p>
+                            <p>Se por qualquer motivo você não estiver satisfeito com o E-Book, devolvemos cada centavo do seu investimento. Sem perguntas, sem burocracia.</p>
                         </div>
                     </div>
                     
-                    <a href="https://pay.kiwify.com.br/f5db9DM" class="btn btn-large pulse">Quero Meu E-Book Agora!</a>
+                    
                 </div>
             </div>
         </div>
@@ -852,7 +1104,7 @@
     <!-- SEÇÃO FAQ -->
     <section class="faq">
         <div class="container">
-            <h2>Dúvidas Frequentes sobre o E-Book</h2>
+            <h2>Perguntas Frequentes</h2>
             <div class="accordion">
                 <div class="accordion-item">
                     <div class="accordion-header">
@@ -861,7 +1113,7 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
-                            <p>Não! Este E-Book foi especialmente desenvolvido para iniciantes completos. Todas as estratégias são explicadas de forma clara e passo a passo, desde o básico absoluto.</p>
+                            <p>Não! Este E-Book foi especialmente desenvolvido para iniciantes completos. Todas as estratégias são explicadas de forma clara e passo a passo, desde o básico absoluto. Se você sabe usar o Instagram, já tem todo conhecimento técnico necessário.</p>
                         </div>
                     </div>
                 </div>
@@ -872,7 +1124,29 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
-                            <p>Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link para download do E-Book em formato PDF, que pode be lido em qualquer dispositivo: celular, tablet ou computador.</p>
+                            <p>Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link para download do E-Book em formato PDF, que pode ser lido em qualquer dispositivo: celular, tablet ou computador. O acesso aos bônus também será enviado por e-mail.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Preciso ter muitos seguidores para aplicar as estratégias?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Não! As estratégias foram desenvolvidas para funcionar mesmo com poucos seguidores. Na verdade, muitas delas são especialmente eficazes para contas menores, pois o algoritmo do Instagram tende a favorecer engajamento orgânico em contas com menos de 10K seguidores.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Quanto tempo leva para ver resultados?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <p>Os resultados variam conforme a dedicação de cada pessoa, mas a maioria dos alunos reporta primeiras vendas em menos de uma semana aplicando as estratégias. Lembre-se que consistência é mais importante que perfeição - aplicar um pouco todos os dias traz resultados exponenciais.</p>
                         </div>
                     </div>
                 </div>
@@ -883,7 +1157,7 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
-                            <p>Sim! Todos os compradores do E-Book recebem atualizações gratuitas quando novos conteúdos ou estratégias são adicionados.</p>
+                            <p>Sim! Todos os compradores do E-Book recebem atualizações gratuitas quando novos conteúdos ou estratégias são adicionados. O mundo digital muda rápido, e me comprometo a manter você na vanguarda das melhores estratégias de tráfego orgânico.</p>
                         </div>
                     </div>
                 </div>
@@ -894,7 +1168,7 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
-                            <p>Acreditamos que este conhecimento deve estar acessível ao maior número possível de pessoas. Mesmo com um preço acessível, o valor do conteúdo do E-Book é enorme e tem o potencial de transformar sua situação financeira.</p>
+                            <p>Acredito que este conhecimento deve estar acessível ao maior número possível de pessoas. Mesmo com um preço acessível, o valor do conteúdo do E-Book é enorme daniel tem o potencial de transformar sua situação financeira. Esta é uma oportunidade inicial com preço especial de lançamento.</p>
                         </div>
                     </div>
                 </div>
@@ -905,14 +1179,43 @@
     <!-- SEÇÃO FINAL CTA -->
     <section class="final-cta">
         <div class="container">
-            <h2>Não Deixe Essa Oportunidade Passar</h2>
+            <h2>Chegou a Hora de Decidir</h2>
             <p>Você está a um passo de descobrir como construir um negócio online do zero, sem a necessidade de investir em anúncios caros ou ter conhecimentos técnicos avançados.</p>
-            <p>Tudo o que você precisa está neste E-Book completo, elaborado especialmente para iniciantes.</p>
+            <p>Enquanto você hesita, outras pessoas estão aplicando essas estratégias e colhendo resultados.</p>
             
-            <span class="price-highlight">Apenas R$12,90</span>
+            <span class="price-highlight">Apenas R$ 12,90</span>
             
             <p>Menos que um lanche, mas com potencial para mudar completamente sua realidade financeira.</p>
-            <a href="https://pay.kiwify.com.br/f5db9DM" class="btn btn-large pulse">Quero o E-Book Agora!</a>
+            
+            <div class="offer-counter">
+                <div class="counter-title">OFERTA TERMINA EM:</div>
+                <div class="counter">
+                    <div class="counter-item">
+                        <div class="counter-value" id="final-hours">06</div>
+                        <div class="counter-label">Horas</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-value" id="final-minutes">43</div>
+                        <div class="counter-label">Minutos</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-value" id="final-seconds">18</div>
+                        <div class="counter-label">Segundos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="https://pay.kiwify.com.br/f5db9DM" class="btn btn-large pulse">QUERO GARANTIR AGORA MESMO!</a>
+            
+            <div class="guarantee" style="max-width: 600px; margin: 2rem auto;">
+                <div class="guarantee-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="guarantee-text">
+                    <h4>Compra 100% Segura</h4>
+                    <p>Seu pagamento é processado pela Kiwify, plataforma líder em vendas de infoprodutos no Brasil. Seus dados estão protegidos e você conta com garantia incondicional de 7 dias.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -986,10 +1289,17 @@
                 <a id="termsLink">Termos de Uso</a>
                 <a id="privacyLink">Política de Privacidade</a>
                 <a id="contactLink">Contato</a>
-                <a href="https://www.instagram.com/seu_empreendedor_onlinebr" target="_blank" class="instagram-footer">
+            </div>
+            
+            <div class="social-footer">
+                <a href="https://www.instagram.com/seu_empreendedor_onlinebr" target="_blank" class="social-footer-icon">
                     <i class="fab fa-instagram"></i>
                 </a>
+                <a href="https://www.tiktok.com/@empreendedor_onli84" target="_blank" class="social-footer-icon">
+                    <i class="fab fa-tiktok"></i>
+                </a>
             </div>
+            
             <p class="copyright">© 2025 Empreendedor Online. Todos os direitos reservados.</p>
         </div>
     </footer>
@@ -1058,7 +1368,33 @@
                 element.textContent = element.textContent.replace('Venda Sem Gastar Um Centavo', 'E-Book: Venda Sem Gastar Um Centavo');
             }
         });
+        
+        // Contador regressivo
+        function updateCountdown() {
+            const now = new Date();
+            const target = new Date();
+            target.setHours(23, 59, 59, 999);
+            
+            const difference = target - now;
+            
+            if (difference > 0) {
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                
+                document.getElementById('final-hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('final-minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('final-seconds').textContent = seconds.toString().padStart(2, '0');
+            }
+        }
+        
+        // Atualizar o contador a cada segundo
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
     </script>
 </body>
-
 </html>
